@@ -1,0 +1,15 @@
+<h3>{{title}}</h3>
+<form id="location">
+	<div class="col-lg-4">
+	<div class="col-lg-6 ">
+    	<label class="col-lg-6" for="lng">Longitude</label>
+        <input type="text" name="lng" ngModel required #lng/>
+    </div>
+    <div class="col-lg-6 ">
+        <label class="col-lg-6" for="ltd">Latitude</label>
+        <input type="text" #ltd/>
+    </div>
+    <div class="col-lg-12" style="text-align: center"><button type="button" (click)="submitLocation(lng.value, ltd.value)">Get Address</button></div>
+    </div>
+</form>
+<H3>{{ address }}</H3>

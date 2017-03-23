@@ -1,0 +1,21 @@
+<div class="panel panel-primary" [@focusPanel]='state'>
+    <div class="panel-heading">{{ title }} <div class="close" id="close">X</div></div>
+    <form>
+        <div class="panel-body">
+            <label for="fName">Name</label>
+            <input type="text" name="fName"  required #fName />
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lName"  required #lName />
+            <label for="message">Message</label>
+            <textarea rows="6" name="message"  #message></textarea>
+        </div>
+        <div class="panel-footer">
+            <button type="button" (click)="submitForm(fName.value,lName.value,message.value)">Send</button>
+        </div>
+    </form>
+    
+</div>
+<div class="content">
+    <a id="panel-link">Open Dialogue</a>
+</div>
+
